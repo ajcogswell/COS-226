@@ -124,5 +124,3 @@ class AVLTree(BinaryTree):
 #       slight left lean
 #       currNode.Right = rightRotate(currNode.left)
 #   currNode = leftRotate(currNode)
-
-#
