@@ -106,21 +106,23 @@ class AVLTree(BinaryTree):
 # currNode.left = recursive add cal
 # check balance
 # if unbalanced, rotate
+# update height
+# return currNode
 #
 # currNode <- checking balance of this node
 # balance = calcBalance()
 #
-# if (bal < 1):         # bal = left - right
+# if (bal > 1):         # bal = left - right
 #   leftB = currNode.left
 #   if leftB.balance == 1:
 #       slight right lean
 #       currNode.left = leftRotate(currNode.left)
-#
-# elif (leftB.balance == -1):
+#   currNode = rightRotate(currNode)
+# elif (leftB.balance < -1):
 #       rightB = currNode.right
 #   if (rightB.balance == 1):
 #       slight left lean
 #       currNode.Right = rightRotate(currNode.left)
-
+#   currNode = leftRotate(currNode)
 
 #
