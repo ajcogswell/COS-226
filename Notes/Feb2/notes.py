@@ -124,3 +124,42 @@ class AVLTree(BinaryTree):
 #       slight left lean
 #       currNode.Right = rightRotate(currNode.left)
 #   currNode = leftRotate(currNode)
+#
+## Removing from AVL BST ##
+# 
+# Find next largest or next lowest number
+#
+#       (50)
+#    (25)  (70)
+# (10) (30)  (80)
+#
+# 30 would become root if 50 is deleted, but 70 could also work
+#
+# def findNextSmallest(nodeToRemove):
+#   nextSmall = nodeToRemove.left
+#   while(nextSmall.right):
+#       nextSmall = nextSmall.right
+#   # Next small is in the correct spot
+#   return(nextSmall)
+#
+# def remove(currNode, dataToRemove):
+#   if(currNode is None):
+#       raise ValueError("Current node is not found.")
+#       return None
+#   if dataToRemove < currNode.data:
+#       currNode.left = remove(currNode.left, dataToRemove)
+#   elif dataToRemove > currData.data:
+#       currNode.left = remove(currNode.right, dataToRemove)
+#   else:
+#       if currNode.left and currNode.right:
+#           nextSmall = findNextSmallest(currNode)
+#           currNode.data = nextSmall.data
+#           currNode.left = remove(currNode.left, currNode.data)
+#       elif currNode.left:
+#           return currNode.left
+#       elif currNode.right:
+#           return currNode.right
+#       else:
+#           return None
+#
+#
