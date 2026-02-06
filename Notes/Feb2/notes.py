@@ -126,7 +126,7 @@ class AVLTree(BinaryTree):
 #   currNode = leftRotate(currNode)
 #
 ## Removing from AVL BST ##
-# 
+#
 # Find next largest or next lowest number
 #
 #       (50)
@@ -161,5 +161,19 @@ class AVLTree(BinaryTree):
 #           return currNode.right
 #       else:
 #           return None
+#   check balance
+#   balance = calcBalance(currNode)
+#   if balance > 1:
+#       leftB = currNode.left
+#       if leftB.balance == 1:
+#           slight right lean
+#           currNode.left = leftRotate(currNode.left)
+#       currNode = rightRotate(currNode)
+#   elif balance < -1:
+#       rightB = currNode.right
+#       if rightB.balance == 1:
+#           slight left lean
+#           currNode.Right = rightRotate(currNode.left)
+#       currNode = leftRotate(currNode)
 #
 #
