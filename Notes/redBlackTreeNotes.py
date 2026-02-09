@@ -25,4 +25,22 @@
 # 
 # Add:
 #   double red:
+#       when uncle and aunt is red
+#       uncle and parent and grandparent change color
+#       check at grandparent for new double red rotation   
+#   when uncle is black:
+#       when currNode is innerChild:
+#           rotate at parent to make currNode outerChild
+#       when currNode is outerChild:
+#           rotate so currNode is pulled up
+#           recolor parent and grandparent
 #       
+# 
+# 
+# Remove:
+#   double black:
+#       when sibling is red, rotate and recolor
+#       when sibling is black, recolor sibling and parent
+#       when sibling is black and parent is red, rotate and recolor
+#       when sibling is black and parent is black, rotate and recolor
+# 
