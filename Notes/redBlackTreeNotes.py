@@ -34,8 +34,6 @@
 #       when currNode is outerChild:
 #           rotate so currNode is pulled up
 #           recolor parent and grandparent
-#       
-# 
 # 
 # Remove:
 #   double black:
