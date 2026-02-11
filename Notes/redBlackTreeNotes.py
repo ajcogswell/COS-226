@@ -41,12 +41,12 @@
 #       if we delete a red node:
 #           do nothing
 #       if we delete a black node:
-#           if the child was red, recolor the child to black
+#           if the replacement child was red, recolor the replacement child to black
 #       if we delete a black node and the replacement is black:
 #           it becomes a double black node
 #           fixRemove(nodeRemoved)
 #
-# fixRemove(currNode):
+# fixRemove(currNode): # currNode is the node that has the 'double black' property
 #   if sibling is red:
 #       swap colors between sibling and parent
 #       rotate at parent, pulling double black down
@@ -59,7 +59,7 @@
 #       fixRemove(currNode.parent)
 #   if sibling had one red node child and child node is on inside:
 #       swap sibling and inner child
-#       rotate on sibliong to pull inner child up
+#       rotate on sibling to pull inner child up
 # if red child on outside sibling:
 #       swap color of parent & sibling
 #       rotate at parent to pull double black down
